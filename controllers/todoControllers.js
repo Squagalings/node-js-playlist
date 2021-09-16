@@ -8,14 +8,19 @@ var mongoose = require('mongoose')
 
 // app crashed when insertOne was initiated. This is because there is no connection to the dB server. IP was not in the whitelist. Hence, we set connect from anywhere in the network access tab, as a temporary solution.
 
+// mongoose.connect(
+// 	'mongodb+srv://test:test@todo.3wxjn.mongodb.net/todo?retryWrites=true&w=majority'
+// );
+
 mongoose.connect(
-	'mongodb+srv://test:test@todo.3wxjn.mongodb.net/todo?retryWrites=true&w=majority'
+	'mongodb+srv://midautumn:midautumn@cluster0.l5te6.mongodb.net/aSimpleDatabase?retryWrites=true&w=majority'
 );
+
 
 var todoSchema = new mongoose.Schema({
   item: String
 })
-var Todo = mongoose.model('TodoExtra', todoSchema)
+var Todo = mongoose.model('TodoSpecial', todoSchema)
 // var itemOne = Todo({item: 'eat wonton mee'}).save(function(error){
 //   if(error) throw error
 //   console.log('item saved!!!')
