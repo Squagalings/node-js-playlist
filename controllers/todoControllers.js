@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 // app crashed when insertOne was initiated. This is because there is no connection to the dB server. IP was not in the whitelist. Hence, we set connect from anywhere in the network access tab, as a temporary solution.
 
 mongoose.connect(
-	'mongodb+srv://test:test@cluster0.iygkj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+	'mongodb+srv://test:test@todo.3wxjn.mongodb.net/todo?retryWrites=true&w=majority'
 );
 
 var todoSchema = new mongoose.Schema({
